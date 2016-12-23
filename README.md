@@ -1,8 +1,6 @@
-# Minima
+# tcb
 
-Minima is a starter kit for Gulp Projects.
+- sudo npm install
+- sudo gulp
 
-This repository is actually at his beginning, I will make soon a commit with a
-pre-build page template.
-
-More to follow !
+(if doesn’t work - delete the task theme in gulpfile.js)
