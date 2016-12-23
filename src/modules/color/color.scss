@@ -1,0 +1,59 @@
+//Module Code Here
+.color{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: relative;
+	&--preview{
+		border-radius: 3px;
+		max-width: 100%;
+		height: 180px;
+		margin: auto;
+		overflow: hidden;
+		box-shadow: $shadow-small;
+		position: relative;
+	}
+	&--code{
+		background-color: #fff;
+		width: 100%;
+		display: block;
+		position: absolute;
+		left:0;
+		bottom: 0;
+		text-align: center;
+		padding: 10px 0;
+	}
+}
+
+//Responsive
+@media #{$query-desktop-break} {
+
+}
+
+@media #{$query-tablet-break} {
+
+}
+
+@media #{$query-mobile-break} {
+	.color{
+		&--preview{
+			height: 120px;
+		}
+		&--code{
+			padding: 5px 0;
+		}
+	}
+}
+
+
+//Lower Resolution
+@media #{$query-low-res}{
+
+}
+
+
+//Higher Resolution
+@media #{$query-high-res}{
+
+}

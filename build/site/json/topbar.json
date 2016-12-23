@@ -1,0 +1,51 @@
+{
+  "topbar": {
+    "intro": {
+      "txt": "🛠",
+      "href": "../index.html"
+    },
+    "sizing": [
+      {
+        "size": "100vw",
+        "sizeClass": "size-fullscreen",
+        "label": "fullscreen",
+        "datasize": "100%"
+      },
+      {
+        "size": "1024px",
+        "sizeClass": "size-1024px",
+        "label": "desktop",
+        "datasize": "1024px"
+      },
+      {
+        "size": "768px",
+        "sizeClass": "size-768px",
+        "label": "tablet",
+        "datasize": "768px"
+      },
+      {
+        "size": "320px",
+        "sizeClass": "size-320px",
+        "label": "mobile",
+        "datasize": "320px"
+      }
+    ],
+    "links": [
+      {
+        "label": "View site",
+        "href": "../site/index.html",
+        "target": ""
+      },
+      {
+        "label": "View styleguides",
+        "href": "../styleguides/styleguides.html",
+        "target": ""
+      },
+      {
+        "label": "Github documentation",
+        "href": "https://github.com/vanderlanth/Minima",
+        "target": "_blank"
+      }
+    ]
+  }
+}

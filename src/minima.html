@@ -1,0 +1,226 @@
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Minima</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="icon" type="image/png" href="site/others/fav.png">
+	</head>
+	<style type="text/css">
+
+@import "https://fonts.googleapis.com/css?family=Space+Mono";
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Space Mono', monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #eee;
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: #222;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+.content {
+	margin: 10vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+			-ms-flex-flow: row wrap;
+					flex-flow: row wrap;
+	height: 80vh;
+	position: relative;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 100;
+	margin: 0;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.header--title {
+	color: #444;
+}
+.header--headline {
+	color: #bbb;
+}
+
+.features {
+	margin: auto 0;
+}
+.features--list {
+	padding: 0;
+	list-style: none;
+}
+.features .list--item {
+	color: #bbb;
+	text-indent: -23px;
+}
+.features .list--item:before {
+	content: '- ';
+	opacity: .5;
+}
+.features .list--item a {
+	text-indent: 0px;
+}
+
+.minima--nav {
+	position: absolute;
+	bottom: 0;
+	left:0;
+}
+.minima--nav .nav--title {
+	display: inline-block;
+}
+.minima--nav .overflow {
+	margin-right: 20px;
+}
+
+.overflow{
+	overflow: hidden;
+	display: inline-flex;
+}
+
+a {
+	display: inline-block;
+	color: #3137FD;
+	text-decoration: none;
+	position: relative;
+	z-index: 2;
+}
+a:focus, a:visited {
+	color: #3137FD;
+}
+a:before {
+	content: '';
+	display: block;
+	height: 8px;
+	width: 0%;
+	position: absolute;
+	background-color: #ddd;
+	bottom: 2px;
+	left: 0;
+	z-index: -1;
+	-webkit-transition: .225s .375s ease width, .2s .225s ease left;
+	transition: .225s .375s ease width, .2s .225s ease left;
+}
+a:after {
+	content: '';
+	display: block;
+	height: 8px;
+	width: 0%;
+	position: absolute;
+	background-color: #ddd;
+	bottom: 2px;
+	left: 0%;
+	z-index: -1;
+	-webkit-transition: .225s ease all;
+	transition: .225s ease all;
+}
+a:hover:before {
+	width: 100%;
+	left: 100%;
+	-webkit-transition: .225s ease width, .2s .15s ease left;
+	transition: .225s ease width, .2s .15s ease left;
+}
+a:hover:after {
+	width: 100%;
+	-webkit-transition: .225s .25s ease all;
+	transition: .225s .25s ease all;
+}
+
+@media screen and (max-width: 767px) and (orientation:portrait) {
+	html, body {
+		font-size: 12px;
+	}
+
+	h1, h2, h3, h4 {
+		font-size: 12px;
+	}
+
+	a:before, a:after, a:hover:before, a:hover:after {
+		display: none;
+		opacity: 0;
+	}
+
+	.minima--nav .nav--title {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation:landscape) {
+	html, body {
+		font-size: 12px;
+		height: auto;
+		overflow: scroll;
+	}
+
+	h1, h2, h3, h4 {
+		font-size: 12px;
+	}
+
+	a {
+		top: 0px;
+		overflow: visible;
+	}
+
+	a:before, a:after, a:hover:before, a:hover:after {
+		display: none;
+		opacity: 0;
+	}
+
+	.minima--nav .nav--title {
+		display: block;
+	}
+	.content {
+		height: 400px;
+	}
+}
+
+
+	</style>
+	<body>
+
+		<div class="content">
+			<header class="header">
+				<h1 class="header--title">Minima 🛠</h1>
+				<h4 class="header--headline">A lightweight static website generator using Gulp</h4>
+			</header>
+			<article class="features">
+				<h2 class="features--title">Including -></h2>
+				<ul class="features--list">
+					<li class="list--item">Fully customizable</li>
+					<li class="list--item">Styleguide generator</li>
+					<li class="list--item">Grid System</li>
+					<li class="list--item">Responsive helpers</li>
+					<li class="list--item">CSS reset</li>
+					<li class="list--item">SCSS, JADE and JS compiler</li>
+					<li class="list--item">JS Prototype basic structure</li>
+					<li class="list--item">Browser Sync</li>
+					<li class="list--item">Content manager with YAML</li>
+					<li class="list--item">Image Compressor</li>
+					<li class="list--item">And more on the <span class='overflow'><a href='https://github.com/vanderlanth/Minima' target='_blank'>Github Doc</a></span></li>
+				</ul>
+			</article>
+			<nav class="minima--nav">
+				<h2 class="nav--title">Go to -></h2>
+				<span class='overflow'><a href="site/index.html" class="nav--link">Site</a></span>
+				<span class='overflow'><a href="styleguides/styleguides.html" class="nav--link">Styleguides</a></span>
+			</nav>
+		</div>
+	</body>
+</html>

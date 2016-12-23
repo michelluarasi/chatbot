@@ -1,0 +1,7 @@
+mixin color(classes, content)
+	- var content = content || _variables.color
+	- var classes = classes || 'color'
+	each item in content
+		div(class=classes+' col-xs-4 col-s-3 col-l-2')
+			div(class=classes+'--preview' style='background-color:'+item+'')
+				span(class=classes+'--code')=item

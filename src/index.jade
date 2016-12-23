@@ -1,0 +1,134 @@
+include modules/**/*.jade
+- var images  = "images/"
+- var videos  = "videos/"
+- var others  = "others/"
+
+doctype
+html
+	mixin head(index.head)
+	body
+		a(class='documentation' href='documentation/index.html' target='_blank') View documentation
+		.nav_dummy
+			a(href='subpage.html') Go to subpage
+
+		//-Contains the regular content and also the bot
+		//-over it if it is displayed.
+		//-.home_chat only for homepage!!!
+		.wrapper_chatbot.home_chat
+			.tamedia_chatbot_toggle
+
+			//-chatbot
+			//-.chat_is_fs only for homepage!!!
+			.tamedia_chatbot.chat_is_fs
+				.wrapper-chat
+
+			//-chatbot-settings
+			.tamedia_chatbot_settings.settings_closed
+
+				.button_settings
+
+				.tamedia_chatbot_settings_container
+					label.tamedia_settings_display.tamedia_settings_switch
+						h6.tamedia_chatbot_settings_title Hide Conversation
+						input(name="pref_displayChat" type="checkbox" data-storage='pref_displayChat' class='tamedia_settings_input setting_displayChat')
+						.tamedia_settings_slider_round
+
+				.tamedia_chatbot_settings_container
+					label.tamedia_settings_display.tamedia_settings_switch
+						h6.tamedia_chatbot_settings_title Reset chat
+						input(name="pref_keepChat" type="checkbox" data-storage='pref_keepChat' class='tamedia_settings_input setting_keepChat')
+						.tamedia_settings_slider_round
+
+			//-chatbot-answer
+			.answerPurposal
+
+
+		.page_content_dummy
+			span Content
+		mixin js
+
+
+template#botContainer
+	.botContainer
+
+template#userContainer
+	.userContainer
+
+template#botMessageText
+	.message--container
+		.istyping
+			span
+			span
+			span
+		.message--overflow
+			.message--bubble
+				.message--content
+
+template#botMessageArticleImg
+	.article--container
+		.istyping
+			span
+			span
+			span
+		.article--overflow
+			.article--bubble
+				a.message--link(target='_blank')
+					.link--overflow
+						img.link--image(alt='this is an img link')
+					.link--textContent
+
+template#userAnswer
+	.answer--container
+		.answer--overflow
+			.answer--bubble
+				.answer--content
+		.status
+			svg(height='16px', version='1.1', viewbox='0 0 16 16', width='16px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+				g#Symbols(fill='none', fill-rule='evenodd', stroke='none', stroke-linecap='round', stroke-width='1')
+					path#path(d='M1,7.90018351 C1,2.85580141 5.0398961,1 7.98514752,1 C10.9303989,1 14.9252153,3.33575585 14.9252155,7.98079039 C14.9252157,12.6258249 11.1316646,15.0222454 8.08284775,15.0222454', stroke='#FFFFFF')
+
+template#userAnswerInput
+	.answer--container
+		.answer--overflow
+			.answer--bubble
+				input.answer--content__input
+		button.input-button(type='button') Send
+
+template#userAnswerArea
+	.answer--container__area
+		.answer--overflow__area
+			.answer--bubble
+				textarea.answer--content__area(cols='60', rows='1')
+		button.input-button(type='button') Send
+
+template#normal_text
+	.chat-normal_text
+		.istyping
+			span
+			span
+			span
+		.chat-normal_text--overflow
+
+template#image_link
+	.chat-image_link
+		.istyping
+			span
+			span
+			span
+		.chat-image_link--overflow
+			.chat-image_link--bubble
+				a.message--link(target='_blank')
+					.link--overflow
+						img.img--link--image(alt='this is an img link')
+					.link--textContent
+					.link--textContent--sub
+
+template#image_simple
+	.chat-image_simple
+		.istyping
+			span
+			span
+			span
+		.image--overflow
+			.image--bubble
+				img.image_simple--image(alt='image from the chat')
